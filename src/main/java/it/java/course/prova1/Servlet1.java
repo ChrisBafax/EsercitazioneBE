@@ -18,8 +18,8 @@ public class Servlet1 extends HttpServlet {
         String jspPage = "name.jsp";
         String name = "Christian";
         request.setAttribute("name", name);
-        RequestDispatcher view = request.getRequestDispatcher(jspPage);
-        view.forward(request, response);
+        RequestDispatcher pageName = request.getRequestDispatcher(jspPage);
+        pageName.forward(request, response);
     }
 
     @Override
