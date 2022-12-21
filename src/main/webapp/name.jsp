@@ -1,34 +1,35 @@
+
+<%--
+  Created by IntelliJ IDEA.
+  User: christianbafaro
+  Date: 21/12/22
+  Time: 17:28
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Title -->
-        <title>Prova1</title>
+        <title>Name</title>
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <!-- Header of the Page -->
         <header>
-            <h1 class="display-1">Hello, world!</h1>
+            <h1 class="display-1">Servlet1</h1>
         </header>
-
-        <!-- Articles of the Page-->
         <article>
-            <!-- First section of the Article -->
-            <section>
-                <a href="hello-servlet">Hello Servlet</a>
-            </section>
-
-            <!-- Second section of the Article -->
-            <section>
-                <a href="Servlet1">Servlet1</a>
-            </section>
+            <p>Il nome è:</p>
+        </article>
+        <article>
+            <div>
+                <p>${name}</p>
+            </div>
         </article>
 
         <!-- Bootstrap Bundle with Popper -->
