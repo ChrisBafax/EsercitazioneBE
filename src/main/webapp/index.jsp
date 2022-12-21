@@ -18,7 +18,7 @@
             <h1 class="display-1">Hello, world!</h1>
         </header>
 
-        <!-- Articles of the Page-->
+        <!-- First article of the Page-->
         <article>
             <!-- First section of the Article -->
             <section>
