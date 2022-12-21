@@ -28,13 +28,7 @@
         <!-- First article of the Page-->
         <article>
             <p>Il nome è:</p>
-        </article>
-
-        <!-- Second article of the Page-->
-        <article>
-            <div>
-                <p>${name}</p>
-            </div>
+            <p>${name}</p>
         </article>
 
         <!-- Bootstrap Bundle with Popper -->
