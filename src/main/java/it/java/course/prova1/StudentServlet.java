@@ -16,6 +16,10 @@ public class StudentServlet extends HttpServlet {
         request.setAttribute("firstname", firstname);
         String lastname = request.getParameter("lastname");
         request.setAttribute("lastname", lastname);
+        String country = request.getParameter("country");
+        request.setAttribute("country", country);
+        String email = request.getParameter("email");
+        request.setAttribute("email", email);
         String username = request.getParameter("username");
         request.setAttribute("username", username);
         String password = request.getParameter("password");
@@ -24,6 +28,8 @@ public class StudentServlet extends HttpServlet {
         Student studenti = new Student();
         studenti.setFirstname(firstname);
         studenti.setLastname(lastname);
+        studenti.setCountry(country);
+        studenti.setEmail(email);
         studenti.setUsername(username);
         studenti.setPassword(password);
 

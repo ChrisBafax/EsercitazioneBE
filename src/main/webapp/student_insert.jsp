@@ -38,6 +38,10 @@
                     <input class="form-control" name="firstname" placeholder="Insert your first name" type="text">
                     <label>Last name: </label>
                     <input class="form-control" name="lastname" placeholder="Insert your last name" type="text">
+                    <label>Country: </label>
+                    <input class="form-control" name="country" placeholder="Insert your country" type="text">
+                    <label>Email address: </label>
+                    <input class="form-control" name="email" placeholder="Insert your email address" type="text">
                     <label>Username: </label>
                     <input class="form-control" name="username" placeholder="Insert your username" type="text">
                     <label>Password: </label>

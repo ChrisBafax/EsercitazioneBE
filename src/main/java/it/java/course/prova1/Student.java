@@ -3,12 +3,16 @@ package it.java.course.prova1;
 public class Student {
     private String firstname;
     private String lastname;
+    private String country;
+    private String email;
     private String username;
     private String password;
 
-    public Student(String firstname, String lastname, String username, String password) {
+    public Student(String firstname, String lastname, String country, String email,String username, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
+        this.country = country;
+        this.email = email;
         this.username = username;
         this.password = password;
     }
@@ -35,6 +39,22 @@ public class Student {
 
     public String getUsername() {
         return username;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setUsername(String username) {
