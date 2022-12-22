@@ -27,12 +27,12 @@
         <!-- Header of the Page -->
         <header>
             <jsp:include page="navbar.jsp"></jsp:include>
-            <h1 class="display-1">Servlet1</h1>
+            <h1 class="display-1">Name</h1>
         </header>
 
         <!-- First article of the Page-->
         <article>
-            <p>Il nome è:</p>
+            <p>Your name is:</p>
             <p>${name}</p>
         </article>
 
