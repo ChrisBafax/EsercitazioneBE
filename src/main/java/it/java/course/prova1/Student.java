@@ -1,6 +1,7 @@
 package it.java.course.prova1;
 
 public class Student {
+    protected int id;
     private String firstname;
     private String lastname;
     private String country;
@@ -17,8 +18,35 @@ public class Student {
         this.password = password;
     }
 
+    public Student(int id, String firstname, String lastname, String country, String email,String username, String password) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.country = country;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
+
+    public Student(int id, String firstname, String lastname, String country, String email,String username) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.country = country;
+        this.email = email;
+        this.username = username;
+    }
+
     public Student() {
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstname() {

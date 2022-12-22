@@ -34,9 +34,8 @@
 
         <article>
             <section>
-                <p>Welcome ${studente.getFirstname()} ${studente.getLastname()} from ${studente.getCountry}.</p>
-                <p>You email is ${studente.getEmail}.</p>
-                <p>Your username is ${studente.getUsername()}.</p>
+                <p>Please return to the main page now.</p>
+                <p>Or search for a student:</p>
             </section>
         </article>
 

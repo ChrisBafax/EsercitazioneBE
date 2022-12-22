@@ -5,10 +5,20 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet(name = "StudentServlet", value = "/StudentServlet")
 public class StudentServlet extends HttpServlet {
 
+    private userDAO userDAO;
+    public void init() {
+        userDAO = new userDAO();
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +43,23 @@ public class StudentServlet extends HttpServlet {
         studenti.setUsername(username);
         studenti.setPassword(password);
 
-        request.setAttribute("studente", studenti);
+        try {
+            userDAO.getConnection();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            userDAO.insertUser(studenti);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        request.setAttribute("studenti", studenti);
 
         String jspPage = "successStudent.jsp";
         RequestDispatcher pageName = request.getRequestDispatcher(jspPage);
