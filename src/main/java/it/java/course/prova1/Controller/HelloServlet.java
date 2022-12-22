@@ -1,4 +1,4 @@
-package it.java.course.prova1;
+package it.java.course.prova1.Controller;
 
 import java.io.*;
 

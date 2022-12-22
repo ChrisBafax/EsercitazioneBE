@@ -1,4 +1,4 @@
-package it.java.course.prova1;
+package it.java.course.prova1.Model;
 
 public class Student {
     protected int id;

@@ -1,4 +1,6 @@
-package it.java.course.prova1;
+package it.java.course.prova1.DAO;
+
+import it.java.course.prova1.Model.Student;
 
 import java.sql.*;
 import java.util.*;
@@ -23,7 +25,7 @@ public class userDAO {
 
     public userDAO() {}
 
-    protected Connection getConnection() throws SQLException, ClassNotFoundException {
+    public Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection(jdbcURL, jdbcUser, jdbcPassword);
         System.out.println("Connected to Database.");

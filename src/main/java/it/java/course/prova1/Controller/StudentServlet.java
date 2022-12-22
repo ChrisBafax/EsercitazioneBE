@@ -1,5 +1,7 @@
-package it.java.course.prova1;
+package it.java.course.prova1.Controller;
 
+import it.java.course.prova1.DAO.userDAO;
+import it.java.course.prova1.Model.Student;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;

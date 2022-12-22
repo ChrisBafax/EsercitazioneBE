@@ -1,5 +1,6 @@
-package it.java.course.prova1;
+package it.java.course.prova1.Controller;
 
+import it.java.course.prova1.DAO.userDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 @WebServlet(name = "StudentGetIDServlet", value = "/StudentGetIDServlet")
 public class StudentGetIDServlet extends HttpServlet {
 
-    private userDAO userDAO;
+    private it.java.course.prova1.DAO.userDAO userDAO;
     public void init() {
         userDAO = new userDAO();
     }

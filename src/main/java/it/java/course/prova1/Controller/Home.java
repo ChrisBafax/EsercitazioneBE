@@ -1,4 +1,4 @@
-package it.java.course.prova1;
+package it.java.course.prova1.Controller;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -6,8 +6,8 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "Servlet1", value = "/Servlet1")
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "Home", value = "/Home")
+public class Home extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
@@ -16,12 +16,9 @@ public class Servlet1 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String jspPage = "name.jsp";
-        String name = "Christian";
-        request.setAttribute("name", name);
+        String jspPage = "index.jsp";
         RequestDispatcher pageName = request.getRequestDispatcher(jspPage);
         pageName.forward(request, response);
     }
-
 
 }
