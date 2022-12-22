@@ -17,9 +17,6 @@
     <!-- Title -->
     <title>navbar</title>
 
-    <!-- CSS Stylesheet -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
@@ -39,10 +36,6 @@
               <a class="nav-link" href="Servlet1">Name</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>

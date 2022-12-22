@@ -12,7 +12,7 @@
         <title>Prova1</title>
 
         <!-- CSS Stylesheet -->
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css"/>
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,7 +21,7 @@
     <body>
         <!-- Header of the Page -->
         <header>
-            <jsp:include page="navbar.jsp"></jsp:include>
+            <jsp:include page="navbar.jsp"> </jsp:include>
             <h1 class="display-1">Hello, world!</h1>
         </header>
 
@@ -38,6 +38,8 @@
             </section>
 
             <section>
+                <br>
+                <p>Insert the name you want to search:</p>
                 <form action="FormServlet1" method="post" class="d-flex">
                     <label>
                         <input class="form-control me-2" name="name" placeholder="Search your name">
