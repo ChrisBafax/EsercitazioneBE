@@ -21,7 +21,7 @@
     <body>
         <!-- Header of the Page -->
         <header>
-            <jsp:include page="navbar.jsp"> </jsp:include>
+            <jsp:include page="navbar.jsp"></jsp:include>
             <h1 class="display-1">Hello, world!</h1>
         </header>
 
@@ -37,6 +37,7 @@
                 <a href="Servlet1">Servlet1</a>
             </section>
 
+            <!-- Third section of the Article -->
             <section>
                 <br>
                 <p>Insert the name you want to search:</p>
@@ -45,6 +46,20 @@
                         <input class="form-control me-2" name="name" placeholder="Search your name">
                     </label>
                     <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </section>
+
+            <!-- Forth section of the Article -->
+            <section>
+
+                <form action="LogInServlet" method="post" class="d-flex">
+                    <label>
+                        <input class="form-control me-2" name="username" placeholder="Insert your username" type="text">
+                    </label>
+                    <label>
+                        <input class="form-control me-2" name="password" placeholder="Insert your password" type="password">
+                    </label>
+                    <button class="btn btn-outline-success" type="submit">Log In</button>
                 </form>
             </section>
         </article>
