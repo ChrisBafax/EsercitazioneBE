@@ -36,6 +36,12 @@
             <section>
                 <p>Please return to the main page now.</p>
                 <p>Or search for a student:</p>
+                <form action="StudentGetIDServlet" method="post" class="d-flex">
+                    <label>
+                        <input class="form-control me-2" name="name" placeholder="Search by ID">
+                    </label>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </section>
         </article>
 

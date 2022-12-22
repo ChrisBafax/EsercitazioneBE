@@ -49,7 +49,7 @@ public class userDAO {
     }
 
     public Student selectUser(int id) {
-        Student studente = null;
+        Student studente = new Student();
         // Step 1: Establishing a Connection
         try (Connection connection = getConnection();
              // Step 2:Create a statement using connection object
