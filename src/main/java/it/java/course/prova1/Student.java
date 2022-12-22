@@ -6,33 +6,37 @@ public class Student {
     private String lastname;
     private String country;
     private String email;
+    private int age;
     private String username;
     private String password;
 
-    public Student(String firstname, String lastname, String country, String email,String username, String password) {
+    public Student(String firstname, String lastname, String country, String email, int age, String username, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.country = country;
         this.email = email;
+        this.age = age;
         this.username = username;
         this.password = password;
     }
 
-    public Student(int id, String firstname, String lastname, String country, String email,String username, String password) {
+    public Student(int id, String firstname, String lastname, String country, String email, int age, String username, String password) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.country = country;
         this.email = email;
+        this.age = age;
         this.username = username;
         this.password = password;
     }
 
-    public Student(int id, String firstname, String lastname, String country, String email,String username) {
+    public Student(int id, String firstname, String lastname, String country, String email, int age, String username) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.country = country;
+        this.age = age;
         this.email = email;
         this.username = username;
     }
@@ -83,6 +87,14 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public void setUsername(String username) {

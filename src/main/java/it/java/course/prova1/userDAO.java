@@ -10,16 +10,16 @@ public class userDAO {
     private String jdbcPassword = "";
 
     private static final String INSERT_USERS_SQL = "INSERT INTO students" +
-            "(firstname, lastname, country, email, username, password) VALUES" + "(?, ?, ?, ?, ?, ?)";
+            "(firstname, lastname, country, email, age, username, password) VALUES" + "(?, ?, ?, ?, ?, ?, ?)";
 
     private static final String SELECT_USER_BY_ID =
-            "SELECT id, firstname, lastname, country, email, username FROM students WHERE id = ?";
+            "SELECT id, firstname, lastname, country, email, age, username FROM students WHERE id = ?";
     private static final String SELECT_ALL_USERS =
             "SELECT id, firstname, lastname, country, email, username FROM students";
     private static final String DELETE_USERS_SQL =
             "DELETE FROM students WHERE id = ?";
     private static final String UPDATE_USERS_SQL =
-            "UPDATE students SET firstname = ?, lastname = ?, country = ?, email = ? WHERE id = ?";
+            "UPDATE students SET firstname = ?, lastname = ?, country = ?, email = ?, age = ? WHERE id = ?";
 
     public userDAO() {}
 
@@ -39,8 +39,9 @@ public class userDAO {
             preparedStatement.setString(2, studenti.getLastname());
             preparedStatement.setString(3, studenti.getCountry());
             preparedStatement.setString(4, studenti.getEmail());
-            preparedStatement.setString(5, studenti.getUsername());
-            preparedStatement.setString(6, studenti.getPassword());
+            preparedStatement.setInt(5, studenti.getAge());
+            preparedStatement.setString(6, studenti.getUsername());
+            preparedStatement.setString(7, studenti.getPassword());
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -65,8 +66,9 @@ public class userDAO {
                 String lastname = rs.getString("lastname");
                 String country = rs.getString("country");
                 String email = rs.getString("email");
+                int age = rs.getInt("age");
                 String username = rs.getString("username");
-                studente = new Student(id, firstname, lastname, country, email, username);
+                studente = new Student(id, firstname, lastname, country, email, age, username);
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -96,8 +98,9 @@ public class userDAO {
                 String lastname = rs.getString("lastname");
                 String country = rs.getString("country");
                 String email = rs.getString("email");
+                int age = rs.getInt("age");
                 String username = rs.getString("username");
-                studente.add(new Student(id, firstname, lastname, country, email, username));
+                studente.add(new Student(id, firstname, lastname, country, email, age, username));
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -127,7 +130,8 @@ public class userDAO {
             statement.setString(2, studenti.getLastname());
             statement.setString(3, studenti.getCountry());
             statement.setString(4, studenti.getEmail());
-            statement.setInt(5, studenti.getId());
+            statement.setInt(5, studenti.getAge());
+            statement.setInt(6, studenti.getId());
 
             rowUpdated = statement.executeUpdate() > 0;
         } catch (ClassNotFoundException e) {

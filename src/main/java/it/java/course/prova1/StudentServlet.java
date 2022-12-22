@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.lang.*;
 
 @WebServlet(name = "StudentServlet", value = "/StudentServlet")
 public class StudentServlet extends HttpServlet {
@@ -25,6 +26,8 @@ public class StudentServlet extends HttpServlet {
         request.setAttribute("country", country);
         String email = request.getParameter("email");
         request.setAttribute("email", email);
+        Integer age = Integer.parseInt(request.getParameter("age"));
+        request.setAttribute("age", age);
         String username = request.getParameter("username");
         request.setAttribute("username", username);
         String password = request.getParameter("password");
@@ -35,6 +38,7 @@ public class StudentServlet extends HttpServlet {
         studenti.setLastname(lastname);
         studenti.setCountry(country);
         studenti.setEmail(email);
+        studenti.setAge(age);
         studenti.setUsername(username);
         studenti.setPassword(password);
 

@@ -42,6 +42,8 @@
                     <input class="form-control" name="country" placeholder="Insert your country" type="text">
                     <label>Email address: </label>
                     <input class="form-control" name="email" placeholder="Insert your email address" type="text">
+                    <label>Age: </label>
+                    <input class="form-control" name="age" placeholder="Insert your age" type="number">
                     <label>Username: </label>
                     <input class="form-control" name="username" placeholder="Insert your username" type="text">
                     <label>Password: </label>
