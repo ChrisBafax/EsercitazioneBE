@@ -51,14 +51,14 @@
 
             <!-- Forth section of the Article -->
             <section>
-
-                <form action="LogInServlet" method="post" class="d-flex">
-                    <label>
-                        <input class="form-control me-2" name="username" placeholder="Insert your username" type="text">
-                    </label>
-                    <label>
-                        <input class="form-control me-2" name="password" placeholder="Insert your password" type="password">
-                    </label>
+                <br>
+                <br>
+                <br>
+                <form action="LogInServlet" method="post" class="mb-3">
+                    <label>Username: </label>
+                        <input class="form-control" name="username" placeholder="Insert your username" type="text">
+                    <label>Password: </label>
+                        <input class="form-control" name="password" placeholder="Insert your password" type="password">
                     <button class="btn btn-outline-success" type="submit">Log In</button>
                 </form>
             </section>
