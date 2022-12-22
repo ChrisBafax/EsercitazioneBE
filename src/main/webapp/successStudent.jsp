@@ -33,7 +33,8 @@
 
 <article>
   <section>
-    <p>Welcome ${firstname} ${lastname}</p>
+    <p>Welcome ${studenti.getFirstname} ${lastname}</p>
+    <p>Your username is ${username}</p>
   </section>
 </article>
 

@@ -24,6 +24,14 @@ public class StudentServlet extends HttpServlet {
         String password = request.getParameter("password");
         request.setAttribute("password", password);
 
+        Student studenti = new Student();
+        studenti.setFirstname(firstname);
+        studenti.setLastname(lastname);
+        studenti.setUsername(username);
+        studenti.setPassword(password);
+
+
+
         String jspPage = "successStudent.jsp";
         RequestDispatcher pageName = request.getRequestDispatcher(jspPage);
         pageName.forward(request, response);
