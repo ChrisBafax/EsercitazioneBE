@@ -5,7 +5,7 @@
   Time: 17:28
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <html>
     <head>
         <!-- Required meta tags -->
@@ -26,6 +26,7 @@
     <body>
         <!-- Header of the Page -->
         <header>
+            <jsp:include page="navbar.jsp"></jsp:include>
             <h1 class="display-1">Servlet1</h1>
         </header>
 
