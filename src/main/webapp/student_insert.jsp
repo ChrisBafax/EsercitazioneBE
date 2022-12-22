@@ -48,7 +48,17 @@
                     <input class="form-control" name="username" placeholder="Insert your username" type="text">
                     <label>Password: </label>
                     <input class="form-control" name="password" placeholder="Insert your password" type="password">
-                    <button class="btn btn-outline-success" type="submit">Log In</button>
+                    <button class="btn btn-outline-success" type="submit">Add Student</button>
+                </form>
+            </section>
+
+
+
+            <section>
+                <form action="StudenteDeleteServlet" method="post" class="mb-3">
+                    <label>Insert the ID you want to remove: </label>
+                    <input class="form-control" name="id" placeholder="Insert the ID you want to remove" type="number">
+                    <button class="btn btn-outline-success" type="submit">Delete Student</button>
                 </form>
             </section>
         </article>

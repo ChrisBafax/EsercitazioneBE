@@ -16,7 +16,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!-- Title -->
-        <title>Success</title>
+        <title>Success Delete</title>
 
         <!-- CSS Stylesheet -->
         <link href="style.css" rel="stylesheet" type="text/css" />
@@ -29,19 +29,12 @@
         <!-- Header of the Page -->
         <header>
             <jsp:include page="navbar.jsp"/>
-            <h1 class="display-1">Student info correctly loaded</h1>
+            <h1 class="display-1">Student info correctly removed from the Database.</h1>
         </header>
 
         <article>
             <section>
                 <p>Please return to the main page now.</p>
-                <p>Or search for a student:</p>
-                <form action="StudentGetIDServlet" method="post" class="d-flex">
-                    <label>
-                        <input class="form-control me-2" name="id" placeholder="Search by ID" type="number">
-                    </label>
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </section>
         </article>
 
