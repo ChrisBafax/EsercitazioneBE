@@ -35,6 +35,9 @@
             <li class="nav-item">
               <a class="nav-link" href="Servlet1">Name</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="StudentInfoServlet">Student</a>
+            </li>
           </ul>
         </div>
       </div>
