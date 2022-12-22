@@ -21,7 +21,7 @@
     <body>
         <!-- Header of the Page -->
         <header>
-            <jsp:include page="navbar.jsp"></jsp:include>
+            <jsp:include page="navbar.jsp"/>
             <h1 class="display-1">Hello, world!</h1>
         </header>
 

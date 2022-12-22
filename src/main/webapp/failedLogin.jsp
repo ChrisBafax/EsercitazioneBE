@@ -25,14 +25,14 @@
     <body>
     <!-- Header of the Page -->
     <header>
-      <jsp:include page="navbar.jsp"></jsp:include>
+      <jsp:include page="navbar.jsp"/>
       <h1 class="display-1">Failed Log in</h1>
     </header>
 
     <article>
       <section>
           <p>Your ${errorLogIn} is wrong.</p>
-          <a href="Home">Try agina.</a>
+          <a href="Home">Try again.</a>
       </section>
     </article>
     </body>

@@ -27,7 +27,7 @@
     <body>
     <!-- Header of the Page -->
         <header>
-          <jsp:include page="navbar.jsp"></jsp:include>
+          <jsp:include page="navbar.jsp"/>
           <h1 class="display-1">Insert Student Info</h1>
         </header>
 
