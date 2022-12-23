@@ -1,15 +1,18 @@
 package it.java.course.prova1.Controller;
 
 import it.java.course.prova1.DAO.userDAO;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "StudenteDeleteServlet", value = "/StudenteDeleteServlet")
-public class StudenteDeleteServlet extends HttpServlet {
+@WebServlet(name = "StudenteDeleteButtonServlet", value = "/StudenteDeleteButtonServlet")
+public class StudenteDeleteButtonServlet extends HttpServlet {
 
     private userDAO userDAO;
     public void init() {
@@ -18,7 +21,8 @@ public class StudenteDeleteServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        request.setAttribute("id", id);
     }
 
     @Override
@@ -32,8 +36,6 @@ public class StudenteDeleteServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        String jspPage = "successDeleteStudent.jsp";
-        RequestDispatcher pageName = request.getRequestDispatcher(jspPage);
-        pageName.forward(request, response);
+        response.sendRedirect("StudentShowAllServlet");
     }
 }

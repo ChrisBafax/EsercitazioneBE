@@ -37,6 +37,7 @@
                             <th>Email</th>
                             <th>Age</th>
                             <th>Username</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
 
@@ -50,6 +51,14 @@
                                 <td><c:out value="${student.getEmail()}"/></td>
                                 <td><c:out value="${student.getAge()}"/></td>
                                 <td><c:out value="${student.getUsername()}"/></td>
+
+                                <td>
+                                    <form action="StudenteDeleteButtonServlet" method="post" class="d-flex">
+                                        <input class="form-control me-2" type="hidden" name="id" value="<c:out value="${student.getId()}"/>">
+                                        <button type="submit"><i class="bi bi-trash3"/></button>
+                                    </form>
+                                    <a href="#"><i class="bi bi-pencil-square"/></a>
+                                </td>
                             </tr>
                         </c:forEach>
                     </tbody>

@@ -31,7 +31,7 @@
                             <a class="nav-link" style=" color: ${param.student}" href="StudentInfoServlet">Student</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style=" color: ${param.allStudents}" href="StudentShowAllServlet">All students</a>
+                            <a class="nav-link" style=" color: ${param.allStudents}" href="<%=request.getContextPath()%>/StudentShowAllServlet">All students</a>
                         </li>
                     </ul>
                 </div>

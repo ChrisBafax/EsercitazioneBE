@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "StudentShowAllServlet", value = "/StudentShowAllServlet")
+@WebServlet(name = "StudentShowAll", value = "/StudentShowAllServlet")
 public class StudentShowAllServlet extends HttpServlet {
 
     private userDAO userDAO;
@@ -21,7 +21,7 @@ public class StudentShowAllServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Student> listStudent = null;
-        String jspPage = "allInfoStudent.jsp";
+        String jspPage = "allStudent.jsp";
 
         listStudent = userDAO.selectAllUsers();
         request.setAttribute("listStudent", listStudent);
