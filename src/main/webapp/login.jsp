@@ -8,34 +8,27 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head>
+        <!-- Title -->
+        <title>Title</title>
 
-    <!-- Title -->
-    <title>Title</title>
+        <!-- Style of the page -->
+        <jsp:include page="style.jsp"/>
+    </head>
 
-    <!-- CSS Stylesheet -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <body>
+        <!-- Header of the Page -->
+        <header>
+            <!-- Navbar -->
+            <jsp:include page="navbar.jsp"/>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  </head>
+            <h1 class="display-1">Log In Successful</h1>
+        </header>
 
-  <body>
-    <!-- Header of the Page -->
-    <header>
-      <jsp:include page="navbar.jsp"/>
-      <h1 class="display-1">Log In Successful</h1>
-    </header>
-
-    <article>
-      <section>
-        <p>Welcome ${username}</p>
-      </section>
-    </article>
-
-  </body>
+        <article>
+            <section>
+                <p>Welcome ${username}</p>
+            </section>
+        </article>
+    </body>
 </html>
