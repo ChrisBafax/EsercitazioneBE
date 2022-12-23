@@ -1,4 +1,3 @@
-<%--@elvariable id="studente" --%>
 <%--
   Created by IntelliJ IDEA.
   User: christianbafaro
@@ -16,7 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!-- Title -->
-        <title>Success</title>
+        <title>Student Info</title>
 
         <!-- CSS Stylesheet -->
         <link href="style.css" rel="stylesheet" type="text/css" />
@@ -29,15 +28,45 @@
         <!-- Header of the Page -->
         <header>
             <jsp:include page="navbar.jsp"/>
-            <h1 class="display-1">Student info correctly loaded</h1>
+            <h1 class="display-1">Student ${studente.getId} info:</h1>
         </header>
 
         <article>
             <section>
+                <p>You have selected the following student:</p>
+
+                <table>
+                    <caption>Student ID: ${studente.getId}</caption>
+                    <tbody>
+                        <tr>
+                            <th>First name:</th>
+                            <td>${studente.getFirstname}</td>
+                        </tr>
+                        <tr>
+                            <th>Last name:</th>
+                            <td>${studente.getLastname}</td>
+                        </tr>
+                        <tr>
+                            <th>Country:</th>
+                            <td>${studente.getCountry}</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>${studente.getEmail}</td>
+                        </tr>
+                        <tr>
+                            <th>Age:</th>
+                            <td>${studente.getAge}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
                 <p>You may now return to the main page.</p>
                 <form action="StudentGetIDServlet" method="post" class="d-flex">
-                    <label>Or search for a student:</label>
-                        <input class="form-control me-2" name="id" placeholder="Search by ID" type="number">
+                    <label>Or search for another student:</label>
+                    <input class="form-control me-2" name="id" placeholder="Search by ID" type="number">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </section>

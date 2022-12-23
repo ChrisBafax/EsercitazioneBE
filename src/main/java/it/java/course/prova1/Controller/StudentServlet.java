@@ -20,6 +20,7 @@ public class StudentServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Reading the parameters got from the form
         String firstname = request.getParameter("firstname");
         request.setAttribute("firstname", firstname);
         String lastname = request.getParameter("lastname");
@@ -35,6 +36,7 @@ public class StudentServlet extends HttpServlet {
         String password = request.getParameter("password");
         request.setAttribute("password", password);
 
+        // Saving data into instance of model Student()
         Student studenti = new Student();
         studenti.setFirstname(firstname);
         studenti.setLastname(lastname);
@@ -44,25 +46,21 @@ public class StudentServlet extends HttpServlet {
         studenti.setUsername(username);
         studenti.setPassword(password);
 
-        try {
-            userDAO.getConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+        String jspPage;
 
+        // Try-catch box with error result if SQL Exception
         try {
             userDAO.insertUser(studenti);
+
+            request.setAttribute("studenti", studenti);
+            jspPage = "successStudent.jsp";
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            jspPage = "errorStudent.jsp";
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            jspPage = "errorStudent.jsp";
         }
 
-        request.setAttribute("studenti", studenti);
-
-        String jspPage = "successStudent.jsp";
+        // Output of success or error page
         RequestDispatcher pageName = request.getRequestDispatcher(jspPage);
         pageName.forward(request, response);
     }

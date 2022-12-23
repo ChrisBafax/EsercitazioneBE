@@ -1,9 +1,8 @@
-<%--@elvariable id="studente" --%>
 <%--
   Created by IntelliJ IDEA.
   User: christianbafaro
-  Date: 22/12/22
-  Time: 12:30
+  Date: 23/12/22
+  Time: 09:32
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
@@ -16,7 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!-- Title -->
-        <title>Success</title>
+        <title>Error</title>
 
         <!-- CSS Stylesheet -->
         <link href="style.css" rel="stylesheet" type="text/css" />
@@ -28,23 +27,19 @@
     <body>
         <!-- Header of the Page -->
         <header>
-            <jsp:include page="navbar.jsp"/>
-            <h1 class="display-1">Student info correctly loaded</h1>
+          <jsp:include page="navbar.jsp"/>
+          <h1 class="display-1">An error has occurred.</h1>
         </header>
 
         <article>
-            <section>
-                <p>You may now return to the main page.</p>
-                <form action="StudentGetIDServlet" method="post" class="d-flex">
-                    <label>Or search for a student:</label>
-                        <input class="form-control me-2" name="id" placeholder="Search by ID" type="number">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </section>
+          <section>
+            <p>You may now return to the main page.</p>
+          </section>
         </article>
 
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
+
 
