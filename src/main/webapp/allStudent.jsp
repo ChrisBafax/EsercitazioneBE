@@ -55,9 +55,12 @@
                                 <td>
                                     <form action="StudenteDeleteButtonServlet" method="post" class="d-flex">
                                         <input class="form-control me-2" type="hidden" name="id" value="<c:out value="${student.getId()}"/>">
-                                        <button type="submit"><i class="bi bi-trash3"/></button>
+                                        <button type="submit"><i class="bi bi-trash3"></i></button>
                                     </form>
-                                    <a href="#"><i class="bi bi-pencil-square"/></a>
+                                    <form action="StudentUpdateInfoServlet" method="post" class="d-flex">
+                                        <input class="form-control me-2" type="hidden" name="id" value="<c:out value="${student.getId()}"/>">
+                                        <button type="submit"><i class="bi bi-pencil-square"></i></button>
+                                    </form>
                                 </td>
                             </tr>
                         </c:forEach>
