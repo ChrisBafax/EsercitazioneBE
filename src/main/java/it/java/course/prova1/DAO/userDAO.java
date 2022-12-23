@@ -18,7 +18,7 @@ public class userDAO {
     private static final String SELECT_USER_BY_ID =
             "SELECT id, firstname, lastname, country, email, age, username FROM students WHERE id = ?";
     private static final String SELECT_ALL_USERS =
-            "SELECT id, firstname, lastname, country, email, username FROM students";
+            "SELECT id, firstname, lastname, country, email, age, username FROM students";
     private static final String DELETE_USERS_SQL =
             "DELETE FROM students WHERE id = ?";
     private static final String UPDATE_USERS_SQL =
