@@ -29,6 +29,7 @@
 
         <article>
             <section>
+                <!-- Insert data for a new student -->
                 <form action="StudentServlet" method="post" class="mb-3">
                     <label>Fist name: </label>
                     <input class="form-control" name="firstname" placeholder="Insert your first name" type="text">

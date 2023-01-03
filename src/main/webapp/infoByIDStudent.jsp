@@ -27,7 +27,9 @@
             <h1 class="display-1">Student ${studente.getId} info:</h1>
         </header>
 
+        <!-- First article fo the page -->
         <article>
+            <!-- Show all info about the selected student -->
             <section>
                 <p>You have selected the following student:</p>
 
@@ -58,6 +60,7 @@
                 </table>
             </section>
 
+            <!-- Return to the mail page or search another student -->
             <section>
                 <p>You may now return to the main page.</p>
                 <form action="StudentGetIDServlet" method="post" class="d-flex">

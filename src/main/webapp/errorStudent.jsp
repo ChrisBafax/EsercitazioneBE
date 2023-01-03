@@ -29,7 +29,8 @@
 
         <article>
               <section>
-                    <p>You may now return to the main page.</p>
+                  <p>You should return to the main page.</p>
+                  <a href="Home">Try again.</a>
               </section>
         </article>
 

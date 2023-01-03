@@ -25,8 +25,10 @@
             <h1 class="display-1">All infos.</h1>
         </header>
 
+        <!-- First article of the page -->
         <article>
             <section>
+                <!-- Table with all Students data -->
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -41,6 +43,7 @@
                         </tr>
                     </thead>
 
+                    <!-- Using forEach to cycle through the database table Students -->
                     <tbody>
                         <c:forEach var="student" items="${listStudent}">
                             <tr>
@@ -52,6 +55,7 @@
                                 <td><c:out value="${student.getAge()}"/></td>
                                 <td><c:out value="${student.getUsername()}"/></td>
 
+                                <!-- Options to delete or edit the student data -->
                                 <td>
                                     <form action="StudenteDeleteButtonServlet" method="post" class="d-flex">
                                         <input class="form-control me-2" type="hidden" name="id" value="<c:out value="${student.getId()}"/>">
@@ -66,7 +70,6 @@
                         </c:forEach>
                     </tbody>
                 </table>
-
             </section>
         </article>
     </body>
